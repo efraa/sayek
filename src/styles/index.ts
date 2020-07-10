@@ -1,0 +1,1 @@
+export { StyledProvider } from './theme'
