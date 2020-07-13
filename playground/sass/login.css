@@ -1,0 +1,88 @@
+.login-header {
+  background-color: #fff;
+}
+
+.login-header__container {
+  padding: 24px 0;
+  border: 1px solid #E5E5E5;
+  text-align: center;
+}
+
+.login-header__logo {
+  font-family: 'Poppins';
+  color: #FF5678;
+  font-size: 22px;
+  text-align: center;
+  margin-bottom: 0;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.login-header__logo:hover {
+  text-decoration: none;
+}
+
+.login__body {
+  padding-top: 85px;
+  padding-bottom: 185px;
+}
+
+.login__body h1 {
+  font-size: 40px;
+  font-family: "Poppins", Arial, Helvetica, sans-serif;
+  margin-bottom: 44px;
+  font-weight: 700;
+}
+
+.login__social {
+  margin-bottom: 24px;
+}
+
+.login__social__item {
+  border: 1px solid #E5E5E5;
+  border-radius: 20px;
+  padding: 44px 38px;
+  max-width: 317px;
+  width: 100%;
+  text-align: center;
+}
+
+.login__social__item__info {
+  color: black;
+}
+
+.login__social__item img {
+  margin-bottom: 15px;
+}
+
+.login__social__item span {
+  font-weight: 600;
+  display: inline-block;
+}
+
+.login__social__item:first-child {
+  margin-right: 16px;
+}
+
+.login-image {
+  text-align: right;
+}
+
+.login-image img {
+  max-width: 440px;
+  width: 100%;
+}
+
+.login__disclaimer {
+  font-size: 14px;
+  font-weight: 700;
+  max-width: 368px;
+  color: #8899A6;
+  font-family: "Poppins", Arial, Helvetica, sans-serif;
+}
+
+.login__disclaimer a {
+  color: #FF5678;
+  text-decoration: none;
+}
+/*# sourceMappingURL=login.css.map */

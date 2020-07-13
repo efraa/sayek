@@ -1,0 +1,92 @@
+$block: 'login';
+
+.#{$block} {
+    &-header{
+        background-color: #fff;
+
+        &__container {
+            padding:24px 0;
+            border:1px solid #E5E5E5;
+            text-align: center;
+        }
+
+        &__logo {
+            font-family:'Poppins';
+            color: #FF5678;
+            font-size: 22px;
+            text-align: center;
+            margin-bottom: 0;
+            font-weight: 700;
+            text-decoration: none;
+
+            &:hover {
+                text-decoration: none;
+            }
+        }
+    }
+
+    &__body{
+        padding-top:85px;
+        padding-bottom: 185px;
+
+        h1{
+            font-size: 40px;
+            font-family: "Poppins", Arial, Helvetica, sans-serif;
+            margin-bottom: 44px;
+            font-weight: 700;
+        }
+    }
+
+    &__social {
+        margin-bottom: 24px;
+        
+        &__item {
+            border: 1px solid #E5E5E5;
+            border-radius: 20px;
+            padding: 44px 38px;
+            max-width: 317px;
+            width: 100%;
+            text-align: center;
+            
+            &__info{
+                color: black;
+            }
+
+            img {
+                margin-bottom: 15px;
+            }
+
+            span {
+                font-weight: 600;
+                display: inline-block;
+            }
+
+            &:first-child {
+                margin-right: 16px;
+            }
+        }
+    }
+
+    &-image {
+        text-align: right;
+
+        img {
+            max-width: 440px;
+            width: 100%;
+        }
+    }
+
+    &__disclaimer {
+        font-size: 14px;
+        font-weight: 700;
+        max-width: 368px;
+        color: #8899A6;
+        font-family: "Poppins", Arial, Helvetica, sans-serif;
+
+        a {
+            color: #FF5678;
+            text-decoration: none;
+        }
+    }
+
+}
