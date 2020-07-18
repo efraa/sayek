@@ -1,77 +1,70 @@
 $block: 'login';
 
 .#{$block} {
-    &-header{
-        background-color: #fff;
-
-        &__container {
-            padding:24px 0;
-            border:1px solid #E5E5E5;
-            text-align: center;
-        }
-
-        &__logo {
-            font-family:'Poppins';
-            color: #FF5678;
-            font-size: 22px;
-            text-align: center;
-            margin-bottom: 0;
-            font-weight: 700;
-            text-decoration: none;
-
-            &:hover {
-                text-decoration: none;
-            }
-        }
-    }
-
     &__body{
-        padding-top:85px;
-        padding-bottom: 185px;
-
+        margin-bottom: 70px;
         h1{
-            font-size: 40px;
+            font-size: 26px;
             font-family: "Poppins", Arial, Helvetica, sans-serif;
-            margin-bottom: 44px;
+            margin-bottom: 26px;
             font-weight: 700;
+            text-align: center;
         }
     }
 
     &__social {
-        margin-bottom: 24px;
+        margin-bottom: 34px;
         
         &__item {
             border: 1px solid #E5E5E5;
-            border-radius: 20px;
-            padding: 44px 38px;
-            max-width: 317px;
+            border-radius: 30px;
+            padding: 20px 0;
             width: 100%;
             text-align: center;
-            
-            &__info{
-                color: black;
+            margin-bottom: 16px;
+            color: black;
+            display: inline-block; 
+
+            background-repeat: no-repeat;
+            background-size: 18px;
+            background-position: 20px;
+
+            &--return {
+                background-color: #F5F8FA;
+                border:0;
+            }
+
+            &--google {
+                background-image: url(../assets/logo-google.svg);
+            }
+
+            &--facebook {
+                background-image: url(../assets/logo-faceboook.svg);
+            }
+
+            &:last-child{
+               margin-bottom: 0;
             }
 
             img {
-                margin-bottom: 15px;
+                width: 18px;
+                height: 18px;
             }
 
             span {
                 font-weight: 600;
                 display: inline-block;
             }
-
-            &:first-child {
-                margin-right: 16px;
-            }
         }
     }
 
     &-image {
-        text-align: right;
+        text-align: center;
+        margin-top: 60px;
+        margin-bottom: 34px;
 
         img {
-            max-width: 440px;
+            max-width: 276px;
             width: 100%;
         }
     }

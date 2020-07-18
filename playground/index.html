@@ -9,41 +9,30 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&display=swap" rel="stylesheet">
   </head>
   <body>
-    <header class="login-header">
-      <div class="login-header__container">
-        <a href="#" class="login-header__logo">Sayek</a>
-      </div><!--.login-header__container-->
-    </header> <!--.login-header-->
-
     <section class="login__body">
       <div class="container">
         <div class="row">
-          <div class="col-md-6">
+          <div class="col-md-12">
+            <div class="login-image">
+              <img src="assets/social-login-image.png" alt="">
+            </div>
             <h1>Regístrese o inicie sesión con su cuenta.</h1>
-            <div  class="login__social d-flex">
-              <div class="login__social__item">
-                <a href="" class="login__social__item__info">
-                  <img src="assets/logo-faceboook.svg" alt="">
-                  <span>Continuar con Facebook</span>
-                </a>
-              </div><!--.login__social__item-->
-              <div class="login__social__item">
-                <a href="" class="login__social__item__info">
-                  <img src="assets/logo-google.svg" alt="">
-                  <span>Continuar con Google</span>
-                </a>
-              </div><!--.login__social__item-->
+            <div  class="login__social">
+              <a href="" class="login__social__item login__social__item--facebook">
+                <span>Continuar con Facebook</span>
+              </a><!--.login__social__item-->
+              <a href="" class="login__social__item login__social__item--google">
+                <span>Continuar con Google</span>
+              </a><!--.login__social__item-->
+              <button class=" login__social__item login__social__item--return">
+                <span>volver</span>
+              </button>
             </div><!--.login__social-->
             <div class="login__disclaimer">
               <small>Al continuar, usted acepta los <a href=""> Términos de servicios</a> & <a href="#"> Políticas 
                 de privacidad</a> de Sayek App.</small>
             </div><!--.login__disclaimer-->
-          </div><!--.col-md-6-->
-          <div class="col-md-6">
-            <div class="login-image">
-              <img src="assets/social-login-image.png" alt="">
-            </div>
-          </div><!--.col-md-6-->
+          </div><!--.col-md-12-->
         </div><!--.row-->
       </div><!--.container-->
     </section><!--.login__body-->
