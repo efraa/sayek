@@ -1,0 +1,61 @@
+$block: 'logout';
+
+.#{$block} {
+    &-container {
+        display: flex;
+        flex-direction: column;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        
+        h2 {
+            font-size: 24px;
+            font-family: 'Poppins', Arial, Helvetica, sans-serif;
+            text-align: center;
+            font-weight: bold;
+            margin-bottom: 24px;
+        }
+
+        p {
+            font-size: 16px;
+            font-weight: 500;
+            color: #8899A6;
+            text-align: center;
+        }
+
+        .btn-container {
+            display: flex;
+            justify-content: center;
+            margin-top: 38px;
+
+            .btn {
+                &:first-child {
+                    margin-right:16px;
+                }
+            }
+
+        }
+
+        .btn {
+            padding: 18px 28px;
+            border-radius: 30px;
+            text-align: center;
+            font-size: 16px;
+            font-weight: 500;
+            font-family: 'Poppins', Arial, Helvetica, sans-serif;
+            border: 0px;
+            border-color: transparent;
+
+            &-primary {
+                background-color: #F5F8FA;
+                color: #484848;
+            }
+
+            &-secondary {
+                background-color: #FF5678;
+                color: #fff;
+            }
+        }
+    }
+}
