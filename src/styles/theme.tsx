@@ -3,20 +3,12 @@ import { ThemeProvider } from 'styled-components'
 import { GlobalStyle } from './globalStyles'
 
 enum Colors {
-  black = '#000000',
-  blackDark = '#1A1A1A',
-  blackOdd = '#222222',
-  blackLight = '#2E2E2E',
-  blackLighter = '#444444',
+  black = '#363636',
+  blackOdd = '#8899A6',
   white = '#FFFFFF',
-  whiteDark = '#F8F8F8',
-  pink = '#ED2B74',
-  gray = '#A7ABAE',
-  grayLighter = '#F5F5F5',
-  grayLight = '#E1E2E2',
-  grayDark = '#4C5A64',
-  grayDarkLight = '#6a7882',
-  required = '#D1153B',
+  whiteDark = '#F5F8FA',
+  pink = '#FF5678',
+  gray = '#E5E5E5',
 }
 
 enum Breakpoints {
@@ -27,9 +19,7 @@ enum Breakpoints {
 }
 
 const fonts = {
-  inter: "'Inter', sans-serif",
-  openSans: "'Open Sans', Helvetica, sans-serif",
-  roboto: "'Roboto', sans-serif",
+  poppins: "'Poppins', sans-serif",
 }
 
 const customMediaQuery = (maxWidth: number) =>
@@ -46,22 +36,15 @@ export const theme = {
   colors: {
     ...Colors,
     primary: Colors.pink,
-    secondary: Colors.white,
+    secondary: Colors.black,
     defaultTextColor: Colors.blackOdd,
   },
   fonts: {
     ...fonts,
-    primary: fonts.inter,
-    secondary: fonts.openSans,
-    tertiary: fonts.roboto,
-    default: fonts.openSans,
+    primary: fonts.poppins,
   },
   media,
   breakpoints: Breakpoints,
-  viewport: {
-    h: '1024px',
-    w: '1280px',
-  },
 }
 
 export const StyledProvider: React.FC<{ children: React.ReactNode }> = ({

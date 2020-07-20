@@ -1,8 +1,12 @@
 import React from 'react'
 import { StyledProvider } from './styles'
+import { AuthProvider } from './store/contexts/AuthContext'
+import { Authentication } from './Authentication'
 
 export const App: React.FC = () => (
   <StyledProvider>
-    <h1>Hi there 👋 – I'm Efraa! 🎨</h1>
+    <AuthProvider>
+      <Authentication />
+    </AuthProvider>
   </StyledProvider>
 )

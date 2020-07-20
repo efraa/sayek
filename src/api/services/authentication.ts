@@ -1,5 +1,9 @@
 import { API } from '../apiConnection'
 
 export const AuthenticationService = {
-  signup: (user: {}) => API.post('/signup', user)
+  refreshToken: async () : Promise<{
+    data: {
+      token: string
+    },
+  }> => await API.post('/users/refresh-token')
 }
