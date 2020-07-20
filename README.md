@@ -6,11 +6,7 @@
 > Walls are general themes shared by a group of people who share their content.
 > Given that your posts are under a random username and your details are not disclosed.
 
-<img src="docs/login.png" alt="Sayek Login" style="" />
-<img src="docs/home.png" alt="Sayek" style="" />
-<img src="docs/post.png" alt="Sayek" style="" />
-<img src="docs/colors.png" alt="Sayek" style="" />
-<img src="docs/notifications.png" alt="Sayek" style="" />
+<img src="screens.png" alt="Sayek Login" style="text-align: center;" />
 
 #### Project Status
 
