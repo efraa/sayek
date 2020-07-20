@@ -10,3 +10,10 @@ export const validations = {
   },
   locale: 'en',
 }
+
+export const config = {
+  auth: {
+    facebook: process.env.REACT_APP_API_AUTH_FACEBOOK as string,
+    google: process.env.REACT_APP_API_AUTH_GOOGLE as string,
+  },
+}

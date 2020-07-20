@@ -42,8 +42,8 @@ export const LoginImage = styled.div`
   margin-bottom: 34px;
 
   img {
-      max-width: 276px;
-      width: 100%;
+    max-width: 276px;
+    width: 100%;
   }
 `
 
@@ -59,7 +59,7 @@ export const LoginButton = styled.button`
   text-align: center;
   margin-bottom: 16px;
   color: ${({ theme: { colors } }) => colors.black};
-  display: inline-block; 
+  display: inline-block;
   background-repeat: no-repeat;
   background-size: 18px;
   background-position: 20px;

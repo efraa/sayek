@@ -1,11 +1,11 @@
 import { UserDTO } from '../../api/dtos/UserDTO'
 
 export interface IAuthState {
-  user: UserDTO | undefined,
+  user: UserDTO | undefined
   isAuth: boolean
 }
 
 export const AuthState: IAuthState = {
   user: undefined,
-  isAuth: false
+  isAuth: false,
 }

@@ -9,7 +9,9 @@ import { AuthenticationService } from '../../api/services/authentication'
 
 const login = async (dispatch: Dispatch<AuthTypes>) => {
   try {
-    const { data: { token: requestToken } } = await AuthenticationService.refreshToken()
+    const {
+      data: { token: requestToken },
+    } = await AuthenticationService.refreshToken()
     if (requestToken) {
       const { user }: { user: UserDTO } = await JwtDecode(requestToken)
       if (user) {
@@ -32,5 +34,5 @@ const login = async (dispatch: Dispatch<AuthTypes>) => {
 }
 
 export const AuthActions = {
-  login
+  login,
 }
