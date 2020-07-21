@@ -47,9 +47,7 @@ export const theme = {
   breakpoints: Breakpoints,
 }
 
-export const StyledProvider: React.FC<{ children: React.ReactNode }> = ({
-  children,
-}) => (
+export const StyledProvider = ({ children }: { children: React.ReactNode }) => (
   <ThemeProvider theme={theme}>
     <GlobalStyle />
     {children}

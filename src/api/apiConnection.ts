@@ -1,7 +1,7 @@
 import axios from 'axios'
 import { token } from './token'
 
-const requestOptions = (config: {}) => ({
+const requestOptions = (config: any) => ({
   ...config,
   headers: {
     'Content-Type': 'application/json',

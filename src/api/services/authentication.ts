@@ -5,5 +5,5 @@ export const AuthenticationService = {
     data: {
       token: string
     }
-  }> => await API.post('/users/refresh-token'),
+  }> => API.post('/users/refresh-token'),
 }

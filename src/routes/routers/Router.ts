@@ -1,5 +1,3 @@
 import { AuthenticationRoutes } from './AuthRouter'
 
-export const Router = [
-  ...AuthenticationRoutes,
-]
+export const Router = [...AuthenticationRoutes]

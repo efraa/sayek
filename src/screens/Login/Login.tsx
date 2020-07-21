@@ -2,7 +2,6 @@ import React from 'react'
 import { config } from '../../config'
 import { Link } from 'react-router-dom'
 import { Messages } from '../../data/messageConstants'
-import { ILogin } from './ILogin'
 
 // Components
 import LoginAsset from '../../assets/login.svg'
@@ -17,7 +16,7 @@ import {
   LoginSocial,
 } from './components/StyledComponents'
 
-export const Login: React.FC<ILogin> = () => {
+export const Login: React.FC = () => {
   const onClick = (uri: string) => (window.location.href = uri)
 
   return (

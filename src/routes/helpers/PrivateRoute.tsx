@@ -2,8 +2,8 @@ import React from 'react'
 import { Route, Redirect } from 'react-router-dom'
 
 export const PrivateRoute: React.FC<{
-  isAuth: boolean,
-  redirect?: string,
+  isAuth: boolean
+  redirect?: string
   component: any
 }> = ({ isAuth, redirect, component: Comp }, ...props) =>
   isAuth ? (
