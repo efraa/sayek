@@ -1,4 +1,4 @@
-import React, { useEffect, useContext, useState } from 'react'
+import React, { useEffect, useContext } from 'react'
 import { BrowserRouter } from 'react-router-dom'
 import { AuthContext } from './store/contexts/AuthContext'
 import { AuthActions } from './store/actions/AuthActions'
@@ -6,15 +6,14 @@ import { Routing } from './routes/Routes'
 import { Spinner } from './components/Spinner'
 
 export const Authorized = () => {
-  const [isLoading, setLoading] = useState(true)
   const {
-    state: { isAuth },
+    state: { isAuth, isLoading },
     dispatch,
   } = useContext(AuthContext)
 
   useEffect(() => {
-    AuthActions.login(dispatch).then(() => setLoading(false))
-  }, [dispatch])
+    AuthActions.login(dispatch)
+  }, [])
 
   return isLoading ? (
     <Spinner />

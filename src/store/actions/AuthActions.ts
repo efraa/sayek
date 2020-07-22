@@ -5,13 +5,14 @@ import { AuthTypes } from '../types/AuthTypes'
 import { UserDTO } from '../../api/dtos/UserDTO'
 
 // Services
-import { AuthenticationService } from '../../api/services/authentication'
+import { AuthenticationService } from '../../api/services/AuthenticationService'
 
 const login = async (dispatch: Dispatch<AuthTypes>) => {
   try {
     const {
       data: { token: requestToken },
     } = await AuthenticationService.refreshToken()
+
     if (requestToken) {
       const { user }: { user: UserDTO } = await JwtDecode(requestToken)
       if (!user) return
@@ -21,15 +22,16 @@ const login = async (dispatch: Dispatch<AuthTypes>) => {
         type: 'SET_USER',
         user,
         isAuth: true,
+        isLoading: false,
       })
-
-      return {
-        user,
-        isAuth: true,
-      }
     }
   } catch (error) {
     console.error(error)
+    return dispatch({
+      type: 'SET_USER_FAIL',
+      isAuth: false,
+      isLoading: false,
+    })
   }
 }
 

@@ -1,13 +1,24 @@
-import React from 'react'
-import { Route, Redirect } from 'react-router-dom'
+import React, { useContext, useEffect } from 'react'
+import { Route, Redirect, RouteProps } from 'react-router-dom'
+import { AuthContext } from '../../store/contexts/AuthContext'
 
-export const PrivateRoute: React.FC<{
-  isAuth: boolean
+interface IProps extends RouteProps {
   redirect?: string
-  component: any
-}> = ({ isAuth, redirect, component: Comp }, ...props) =>
-  isAuth ? (
-    <Route {...props} render={p => <Comp {...props} {...p} />} />
-  ) : (
-    <Redirect to={redirect || '/auth'} />
-  )
+}
+
+export const PrivateRoute: React.FC<IProps> = ({ redirect, ...props }) => {
+  const location = window.location.href
+  const {
+    dispatch,
+    state: { isAuth },
+  } = useContext(AuthContext)
+
+  useEffect(() => {
+    dispatch({
+      type: 'SET_LOCATION',
+      location,
+    })
+  }, [])
+
+  return isAuth ? <Route {...props} /> : <Redirect to={redirect || '/auth'} />
+}

@@ -1,7 +1,8 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import { config } from '../../config'
 import { Link } from 'react-router-dom'
 import { Messages } from '../../data/messageConstants'
+import { AuthContext } from '../../store/contexts/AuthContext'
 
 // Components
 import LoginAsset from '../../assets/login.svg'
@@ -17,7 +18,11 @@ import {
 } from './Style'
 
 export const Login: React.FC = () => {
-  const onClick = (uri: string) => (window.location.href = uri)
+  const {
+    state: { location },
+  } = useContext(AuthContext)
+  const onClick = (uri: string) =>
+    (window.location.href = `${uri}/?continue=${location}`)
 
   return (
     <LoginScreen>
