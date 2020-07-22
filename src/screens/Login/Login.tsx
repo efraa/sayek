@@ -14,7 +14,7 @@ import {
   LoginImage,
   LoginButton,
   LoginSocial,
-} from './components/StyledComponents'
+} from './Style'
 
 export const Login: React.FC = () => {
   const onClick = (uri: string) => (window.location.href = uri)

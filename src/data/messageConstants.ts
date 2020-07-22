@@ -11,4 +11,9 @@ export const Messages = {
       four: 'de Sayek App.',
     },
   },
+  logout: {
+    title: '¿Salir de su cuenta?',
+    disclaimer: 'Siempre puede volver a iniciar sesión en cualquier momento.',
+    exit: 'Cerrar sesión',
+  },
 }

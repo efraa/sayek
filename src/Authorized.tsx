@@ -5,9 +5,12 @@ import { AuthActions } from './store/actions/AuthActions'
 import { Routing } from './routes/Routes'
 import { Spinner } from './components/Spinner'
 
-export const Authentication = () => {
+export const Authorized = () => {
   const [isLoading, setLoading] = useState(true)
-  const { state, dispatch } = useContext(AuthContext)
+  const {
+    state: { isAuth },
+    dispatch,
+  } = useContext(AuthContext)
 
   useEffect(() => {
     AuthActions.login(dispatch).then(() => setLoading(false))
@@ -17,7 +20,7 @@ export const Authentication = () => {
     <Spinner />
   ) : (
     <BrowserRouter>
-      <Routing isAuth={state.isAuth} />
+      <Routing isAuth={isAuth} />
     </BrowserRouter>
   )
 }

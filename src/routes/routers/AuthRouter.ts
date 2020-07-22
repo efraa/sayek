@@ -2,7 +2,7 @@ import { lazy } from 'react'
 
 // Screens
 const Login = lazy(() => import('../../screens/Login'))
-// const Logout = lazy(() => import('../../screens/Logout'))
+const Logout = lazy(() => import('../../screens/Logout'))
 
 export const AuthenticationRoutes = [
   {
@@ -13,7 +13,7 @@ export const AuthenticationRoutes = [
   },
   {
     path: '/logout',
-    // component: Logout,
+    component: Logout,
     exact: true,
     isProtected: true,
   },

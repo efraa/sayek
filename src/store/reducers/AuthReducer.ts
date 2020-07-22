@@ -1,5 +1,5 @@
 import { AuthTypes } from '../types/AuthTypes'
-import { IAuthState } from '../state/AuthState'
+import { IAuthState, AuthState } from '../state/AuthState'
 
 export const AuthReducer = (state: IAuthState, action: AuthTypes) => {
   switch (action.type) {
@@ -8,6 +8,10 @@ export const AuthReducer = (state: IAuthState, action: AuthTypes) => {
         ...state,
         user: action.user,
         isAuth: action.isAuth,
+      }
+    case 'LOGOUT':
+      return {
+        ...AuthState,
       }
     default:
       return {
