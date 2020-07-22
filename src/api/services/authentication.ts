@@ -6,4 +6,12 @@ export const AuthenticationService = {
       token: string
     }
   }> => API.post('/users/refresh-token'),
+
+  logout: async (): Promise<{
+    data: [
+      {
+        msg: string
+      }
+    ]
+  }> => API.post('/users/logout'),
 }
