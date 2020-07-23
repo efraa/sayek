@@ -3,17 +3,20 @@ import { Switch, Route } from 'react-router-dom'
 import { Spinner } from '../components/Spinner'
 
 // Routes
-import { PublicRoute } from './helpers/PublicRoute'
-import { PrivateRoute } from './helpers/PrivateRoute'
-import { Router } from './routers/Router'
+import { PublicRoute } from './PublicRoute'
+import { ProtectedRoute } from './ProtectedRoute'
+import { SemiProtectedRoute } from './SemiProtectedRoute'
+import { Router } from './Router'
 const NotFound = lazy(() => import('../screens/NotFound'))
 
 export const Routing: React.FC<{ isAuth: boolean }> = ({ isAuth }) => (
   <Suspense fallback={<Spinner />}>
     <Switch>
-      {Router.map(({ isProtected, ...props }, key) =>
+      {Router.map(({ isProtected, isSemiProtected, ...props }, key) =>
         isProtected ? (
-          <PrivateRoute key={key} {...props} />
+          <ProtectedRoute key={key} {...props} />
+        ) : isSemiProtected ? (
+          <SemiProtectedRoute key={key} {...props} />
         ) : (
           <PublicRoute key={key} isAuth={isAuth} {...props} />
         )
