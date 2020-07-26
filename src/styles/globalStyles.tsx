@@ -10,6 +10,7 @@ export const GlobalStyle = createGlobalStyle`
     overflow-x: hidden;
     background: ${({ theme: { colors } }) => colors.white};
     font-size: 100%;
+    max-width: 768px;
   }
 
   * {
