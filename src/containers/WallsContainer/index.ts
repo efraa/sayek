@@ -1,0 +1,1 @@
+export { WallsContainer } from './WallsContainer'
