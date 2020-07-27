@@ -4,13 +4,13 @@ import React, { memo } from 'react'
 import { Container, Row, Col } from 'reactstrap'
 
 //components
-import { HomeButton } from '../../components/HomeButton'
+import { NavButton } from '../../components/NavButton'
 
 export const Home = memo(() => (
   <Container>
     <Row>
       <Col xs={12}>
-        <HomeButton />
+        <NavButton text="Muros en los que participas"/>
       </Col>
     </Row>
   </Container>
