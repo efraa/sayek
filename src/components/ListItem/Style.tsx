@@ -1,20 +1,22 @@
+import { Link } from 'react-router-dom'
 import styled from 'styled-components'
 
 export const Item = styled.div`
   font-size: 16px;
   border: solid 1px ${({ theme: { colors } }) => colors.gray};
   border-radius: 12px;
-  padding: 24px 16px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   width: 100%;
   margin-bottom: 16px;
+  padding-right: 16px;
 `
 
 export const Circle = styled.div`
   height: 50px;
   width: 50px;
+  min-height: 50px;
   min-width: 50px;
   border-radius: 100%;
   font-size: 18px;
@@ -27,24 +29,15 @@ export const Circle = styled.div`
   background-color: ${({ theme: { colors } }) => colors.primary};
 `
 
-export const CircleWrapper = styled.div`
+export const CircleWrapper = styled(Link)`
   display: flex;
   align-items: center;
+  flex-grow: 1;
+  padding: 24px 16px;
+  text-decoration: none !important;
 `
 
 export const Text = styled.p`
-  font-size: 16px;
   color: ${({ theme: { colors } }) => colors.black};
-`
-
-export const Button = styled.button`
-  width: 35px;
-  height: 35px;
-  min-height: 35px;
-  background-color: ${({ theme: { colors } }) => colors.secondary};
-  border: none;
-  border-radius: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  line-height: 20px;
 `

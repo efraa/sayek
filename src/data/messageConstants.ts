@@ -16,4 +16,7 @@ export const Messages = {
     disclaimer: 'Siempre puede volver a iniciar sesión en cualquier momento.',
     exit: 'Cerrar sesión',
   },
+  walls: {
+    title: 'Lo último que compartiste',
+  },
 }

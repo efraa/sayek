@@ -7,7 +7,6 @@ export const GlobalStyle = createGlobalStyle`
     width: 100%;
     padding: 0;
     margin: auto;
-    overflow-x: hidden;
     background: ${({ theme: { colors } }) => colors.white};
     font-size: 100%;
     max-width: 768px;
@@ -15,6 +14,7 @@ export const GlobalStyle = createGlobalStyle`
 
   * {
     font-family: ${({ theme: { fonts } }) => fonts.primary};
+    word-break: break-word;
   }
 
   img,
@@ -83,7 +83,7 @@ export const GlobalStyle = createGlobalStyle`
   p {
     margin-bottom: 0;
     font-size: 16px;
-    line-height: 24px;
+    line-height: 20px;
     color: ${({ theme: { colors } }) => colors.defaultTextColor};
   }
 

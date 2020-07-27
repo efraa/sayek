@@ -1,4 +1,5 @@
 import React, { memo, ChangeEvent } from 'react'
+import { Arrow } from '../Common'
 import { StyledHead, Title, Button, Wrapper } from './Style'
 
 interface IHead extends React.Props<HTMLDivElement> {
@@ -9,7 +10,9 @@ interface IHead extends React.Props<HTMLDivElement> {
 export const Head: React.FC<IHead> = memo(({ title }) => (
   <StyledHead>
     <Wrapper>
-      <Button>X</Button>
+      <Button>
+        <Arrow />
+      </Button>
       <Title>{title}</Title>
     </Wrapper>
   </StyledHead>

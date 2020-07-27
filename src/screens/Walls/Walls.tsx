@@ -1,15 +1,23 @@
 import React, { memo } from 'react'
 
 // Comps
-import { WallsContainer } from '../../containers/WallsContainer'
-import { Head } from '../../components/Head'
-import { Container, Row, Col } from 'reactstrap'
+import { ListItem } from '../../components/ListItem'
+import { Layout } from '../../components/Layout'
+import { Messages } from '../../data/messageConstants'
 
 export const Walls = memo(() => (
-  <Container>
-    <Row>
-      <Head title="Lo último que compartiste" />
-      <WallsContainer />
-    </Row>
-  </Container>
+  <Layout title={Messages.walls.title}>
+    <>
+      <ListItem />
+      <ListItem />
+      <ListItem />
+      <ListItem />
+      <ListItem />
+      <ListItem />
+      <ListItem />
+      <ListItem />
+      <ListItem />
+      <ListItem />
+    </>
+  </Layout>
 ))
