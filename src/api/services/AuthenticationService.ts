@@ -1,4 +1,5 @@
 import { API } from '../apiConnection'
+import { config } from '../../config'
 
 export const AuthenticationService = {
   refreshToken: async (): Promise<{
@@ -14,4 +15,7 @@ export const AuthenticationService = {
       }
     ]
   }> => API.post('/users/logout'),
+
+  authFacebook: () => config.auth.facebook,
+  authGoogle: () => config.auth.google,
 }

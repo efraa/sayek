@@ -1,5 +1,5 @@
 import React, { useContext } from 'react'
-import { config } from '../../config'
+import { AuthenticationService } from '../../api/services/AuthenticationService'
 import { Link } from 'react-router-dom'
 import { Messages } from '../../data/messageConstants'
 import { AuthContext } from '../../store/contexts/AuthContext'
@@ -36,7 +36,7 @@ export const Login: React.FC = () => {
             <LoginSocial>
               <LoginButton
                 style={{ backgroundImage: `url(${FacebookAsset})` }}
-                onClick={() => onClick(config.auth.facebook)}
+                onClick={() => onClick(AuthenticationService.authFacebook())}
               >
                 <span>{Messages.login.facebookButton}</span>
               </LoginButton>
@@ -44,7 +44,7 @@ export const Login: React.FC = () => {
                 style={{
                   backgroundImage: `url(${GoogleAsset})`,
                 }}
-                onClick={() => onClick(config.auth.google)}
+                onClick={() => onClick(AuthenticationService.authGoogle())}
               >
                 <span>{Messages.login.googleButton}</span>
               </LoginButton>

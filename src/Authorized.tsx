@@ -4,6 +4,7 @@ import { AuthContext } from './store/contexts/AuthContext'
 import { AuthActions } from './store/actions/AuthActions'
 import { Routing } from './routes/Routes'
 import { Spinner } from './components/Spinner'
+import { StoreProvider } from './store/contexts/StoreContext'
 
 export const Authorized = () => {
   const {
@@ -18,8 +19,10 @@ export const Authorized = () => {
   return isLoading ? (
     <Spinner />
   ) : (
-    <BrowserRouter>
-      <Routing isAuth={isAuth} />
-    </BrowserRouter>
+    <StoreProvider>
+      <BrowserRouter>
+        <Routing isAuth={isAuth} />
+      </BrowserRouter>
+    </StoreProvider>
   )
 }
