@@ -15,6 +15,7 @@ export const GlobalStyle = createGlobalStyle`
 
   * {
     font-family: ${({ theme: { fonts } }) => fonts.primary};
+    outline: none !important;
   }
 
   img,
