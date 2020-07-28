@@ -1,19 +1,23 @@
-import React, { memo, ChangeEvent } from 'react'
+import React, { memo } from 'react'
+import { useHistory } from 'react-router-dom'
 import { Arrow } from '../Common'
 import { StyledHead, Title, Button, Wrapper } from './Style'
 
-interface IHead extends React.Props<HTMLDivElement> {
-  onClick?: (event: ChangeEvent<HTMLDivElement>) => void
+interface IHead {
   title: string
 }
 
-export const Head: React.FC<IHead> = memo(({ title }) => (
-  <StyledHead>
-    <Wrapper>
-      <Button>
-        <Arrow />
-      </Button>
-      <Title>{title}</Title>
-    </Wrapper>
-  </StyledHead>
-))
+export const Head: React.FC<IHead> = memo(({ title }) => {
+  const history = useHistory()
+
+  return (
+    <StyledHead>
+      <Wrapper>
+        <Button onClick={() => history.goBack()}>
+          <Arrow />
+        </Button>
+        <Title>{title}</Title>
+      </Wrapper>
+    </StyledHead>
+  )
+})

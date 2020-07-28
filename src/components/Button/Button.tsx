@@ -1,10 +1,7 @@
-import React, { memo, ChangeEvent } from 'react'
+import React, { memo } from 'react'
 import { StyledButton } from './Style'
 
-interface IButton extends React.Props<HTMLButtonElement> {
-  disabled?: boolean
-  children?: React.ReactNode
-  onClick?: (event: ChangeEvent<HTMLButtonElement>) => void
+interface IButton extends React.HTMLProps<HTMLButtonElement> {
   secondary?: boolean
   width?: string
   as?: any

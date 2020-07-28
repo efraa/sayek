@@ -4,7 +4,7 @@ export const StyledHead = styled.div`
   position: sticky;
   min-height: 67px;
   width: 100%;
-  margin-bottom: 16px;
+  margin-bottom: 12px;
   background: ${({ theme: { colors } }) => colors.white};
   top: 0;
   z-index: 1;

@@ -1,9 +1,8 @@
-import React, { memo, ChangeEvent } from 'react'
+import React, { memo } from 'react'
 import { Container, Row, Col } from 'reactstrap'
 import { Head } from '../Head'
 
-interface ILayout extends React.Props<HTMLDivElement> {
-  onClick?: (event: ChangeEvent<HTMLDivElement>) => void
+interface ILayout extends React.HTMLProps<HTMLDivElement> {
   title: string
 }
 

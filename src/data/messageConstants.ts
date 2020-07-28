@@ -1,3 +1,5 @@
+import { Paths } from '../routes/Paths'
+
 export const Messages = {
   back: 'Regresar',
   login: {
@@ -17,6 +19,33 @@ export const Messages = {
     exit: 'Cerrar sesión',
   },
   walls: {
-    title: 'Lo último que compartiste',
+    title: 'Muros en los que participas',
+    create: {
+      title: '¿Quieres agregar un muro?',
+      placeholder: 'Nombre del muro (obligatorio)',
+      button: 'Crear',
+    },
+  },
+  home: {
+    hello: 'Hola,',
+    help: '¿Qué podemos hacer por ti?',
+    usernameHelp: 'Este nombre se elige al azar.',
+    actions: [
+      {
+        id: 1,
+        title: 'Muros en los que participas',
+        to: Paths.walls.list,
+      },
+      {
+        id: 2,
+        title: 'Lo último que compartiste',
+        to: Paths.posts.list,
+      },
+      {
+        id: 3,
+        title: 'Explora lo que otros comparten',
+        to: Paths.explore,
+      },
+    ],
   },
 }
