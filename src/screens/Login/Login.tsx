@@ -1,6 +1,6 @@
 import React, { useContext } from 'react'
 import { AuthenticationService } from '../../api/services/AuthenticationService'
-import { Link } from 'react-router-dom'
+import { Link, useHistory } from 'react-router-dom'
 import { Messages } from '../../data/messageConstants'
 import { AuthContext } from '../../store/contexts/AuthContext'
 
@@ -18,6 +18,7 @@ import {
 } from './Style'
 
 export const Login: React.FC = () => {
+  const history = useHistory()
   const {
     state: { location },
   } = useContext(AuthContext)
@@ -48,7 +49,7 @@ export const Login: React.FC = () => {
               >
                 <span>{Messages.login.googleButton}</span>
               </LoginButton>
-              <LoginButton>
+              <LoginButton onClick={() => history.goBack()}>
                 <span>{Messages.back}</span>
               </LoginButton>
             </LoginSocial>
