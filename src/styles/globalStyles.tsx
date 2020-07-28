@@ -9,12 +9,33 @@ export const GlobalStyle = createGlobalStyle`
     margin: auto;
     background: ${({ theme: { colors } }) => colors.white};
     font-size: 100%;
+  }
+
+  #app {
     max-width: 768px;
+    margin: auto;
   }
 
   * {
     font-family: ${({ theme: { fonts } }) => fonts.primary};
     word-break: break-word;
+    outline: none !important;
+
+    &::-webkit-scrollbar {
+      width: 6px;
+      border-radius: 10px;
+    }
+
+    &::-webkit-scrollbar-track {
+      background: ${({ theme: { colors } }) => colors.white};
+      border-radius: 10px;
+    }
+
+    &::-webkit-scrollbar-thumb,
+    &::-webkit-scrollbar-thumb:hover {
+      background: ${({ theme: { colors } }) => colors.gray};
+      border-radius: 10px;
+    }
   }
 
   img,
