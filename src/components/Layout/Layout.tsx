@@ -7,7 +7,7 @@ interface ILayout extends React.HTMLProps<HTMLDivElement> {
 }
 
 export const Layout: React.FC<ILayout> = memo(({ title, children }) => (
-  <Container>
+  <Container fluid>
     <Row>
       <Col xs={12}>
         <Head title={title} />
