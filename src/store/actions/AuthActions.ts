@@ -3,6 +3,7 @@ import JwtDecode from 'jwt-decode'
 import { token } from '../../api/token'
 import { AuthTypes } from '../types/AuthTypes'
 import { UserDTO } from '../../api/dtos/UserDTO'
+import { Alert } from '../../components/Alert'
 
 // Services
 import { AuthenticationService } from '../../api/services/AuthenticationService'
@@ -40,7 +41,7 @@ const logout = async (dispatch: Dispatch<AuthTypes>) => {
     const { data } = await AuthenticationService.logout()
     if (data[0].msg) {
       token.destroy()
-
+      Alert.info(data[0].msg)
       return dispatch({ type: 'LOGOUT' })
     }
   } catch (error) {

@@ -1,0 +1,34 @@
+.Toastify__toast-container {
+  top: 0;
+  left: 0;
+  transform: none;
+  right: 0;
+  padding: 0;
+  width: 100%;
+}
+
+.Toastify__toast {
+  width: 100%;
+  top: 0;
+}
+
+.Toastify__progress-bar {
+  background: #00D084;
+  height: 4px;
+}
+
+.Toastify__toast {
+  color: #363636;
+  font-size: 14px;
+  padding: 8px;
+  text-align: center;
+}
+
+.Toastify__toast--error {
+  color: white;
+  background: #FF5678;
+}
+
+.Toastify__toast--error .Toastify__progress-bar {
+  background: rgba(0,0,0,0.1);
+}
