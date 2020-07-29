@@ -1,0 +1,53 @@
+@keyframes overlayEnterAnimation {
+  0% { background-color: rgba(0, 0, 0, 0); }
+  100% { background-color: rgba(0, 0, 0, 0.2); }
+}
+
+@keyframes overlayLeaveAnimation {
+  0% { background-color: rgba(0, 0, 0, 0.2); }
+  100% { background-color: rgba(0, 0, 0, 0); }
+}
+
+@keyframes modalEnterAnimation {
+  0% { transform: translateY(100%); }
+  100% { transform: translateY(0); }
+}
+
+@keyframes modalLeaveAnimation {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(100%); }
+}
+
+.react-responsive-modal-modal {
+  box-shadow: none;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  left: 0;
+  right: 0;
+  max-width: 736px;
+  padding: 24px 16px;
+  transform: translateY(100%);
+}
+
+.react-responsive-modal-overlay {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.modal-overlay--open {
+  animation: overlayEnterAnimation 0.25s forwards 0s;
+}
+
+.modal-overlay--close {
+  animation: overlayLeaveAnimation 0.25s forwards 0.5s;
+}
+
+.modal-overlay--open .react-responsive-modal-modal {
+  animation: modalEnterAnimation 0.5s forwards 0.25s;
+}
+
+.modal-overlay--close .react-responsive-modal-modal {
+  animation: modalLeaveAnimation 0.5s forwards 0s;
+}
