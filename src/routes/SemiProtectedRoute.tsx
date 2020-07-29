@@ -11,7 +11,7 @@ export const SemiProtectedRoute: React.FC<RouteProps> = props => {
       type: 'SET_LOCATION',
       location,
     })
-  }, [])
+  }, [dispatch, location])
 
   return <Route {...props} />
 }

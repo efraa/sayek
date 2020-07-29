@@ -18,7 +18,7 @@ export const ProtectedRoute: React.FC<IProps> = ({ redirect, ...props }) => {
       type: 'SET_LOCATION',
       location,
     })
-  }, [])
+  }, [dispatch, location])
 
   return isAuth ? <Route {...props} /> : <Redirect to={redirect || '/auth'} />
 }
