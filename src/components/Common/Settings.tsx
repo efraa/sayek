@@ -16,8 +16,9 @@ const SettingsButton = styled.button`
 
 export const Settings: React.FC<{
   color?: string
-}> = ({ color }) => (
-  <SettingsButton style={{ background: color }}>
+  onClick: () => void
+}> = ({ color, onClick }) => (
+  <SettingsButton style={{ background: color }} onClick={() => onClick()}>
     <svg
       xmlns="http://www.w3.org/2000/svg"
       width="14"
