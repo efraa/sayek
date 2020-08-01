@@ -1,9 +1,11 @@
+import { Link } from 'react-router-dom'
 import styled from 'styled-components'
 
 export const Wrapper = styled.form`
   display: flex;
-  min-height: calc(100vh - 100px);
+  min-height: calc(100vh - 88px);
   flex-direction: column;
+  padding-bottom: 14px;
 `
 
 export const ComposeInput = styled.textarea`
@@ -30,4 +32,73 @@ export const ComposeInput = styled.textarea`
   &:focus {
     outline: none !important;
   }
+`
+
+export const OptionsHead = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 24px;
+  border-bottom: solid 1px ${({ theme: { colors } }) => colors.whiteDark};
+`
+
+export const OptionsCircle = styled.div`
+  height: 50px;
+  width: 50px;
+  min-height: 50px;
+  min-width: 50px;
+  border-radius: 100%;
+  font-size: 18px;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 16px;
+  color: white;
+  background-color: ${({ theme: { colors } }) => colors.primary};
+`
+
+export const OptionsText = styled.p`
+  color: ${({ theme: { colors } }) => colors.black};
+  font-size: 14px;
+`
+
+export const Options = styled.ul`
+  margin: 0;
+  padding: 0;
+  margin-top: 16px;
+`
+
+export const OptionsItem = styled.li`
+  display: flex;
+  padding: 0;
+
+  &:not(:last-child) {
+    margin-bottom: 12px;
+  }
+`
+
+export const OptionsGoTo = styled(Link)`
+  color: ${({ theme: { colors } }) => colors.black} !important;
+  display: flex;
+  align-items: center;
+  background: transparent;
+  border: none;
+  padding: 0;
+  text-decoration: none !important;
+  width: 100%;
+`
+
+export const OptionsIcon = styled.div`
+  width: 40px;
+  height: 40px;
+  min-height: 40px;
+  min-width: 40px;
+  background-color: ${({ theme: { colors } }) => colors.secondary};
+  border: none;
+  border-radius: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 16px;
 `

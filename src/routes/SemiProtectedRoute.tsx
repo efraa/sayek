@@ -1,6 +1,6 @@
 import React, { useContext, useEffect } from 'react'
 import { Route, RouteProps } from 'react-router-dom'
-import { AuthContext } from '../store/contexts/AuthContext'
+import { AuthContext } from '../Authentication'
 
 export const SemiProtectedRoute: React.FC<RouteProps> = props => {
   const location = window.location.href
