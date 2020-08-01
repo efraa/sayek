@@ -1,5 +1,6 @@
 import React, { memo } from 'react'
 import { useHistory } from 'react-router-dom'
+import { truncate } from '../../helpers/truncate'
 import { Arrow } from '../Common'
 import { StyledHead, Title, Button, Wrapper } from './Style'
 
@@ -16,7 +17,7 @@ export const Head: React.FC<IHead> = memo(({ title }) => {
         <Button onClick={() => history.goBack()}>
           <Arrow />
         </Button>
-        <Title>{title}</Title>
+        <Title>{truncate(title, 30)}</Title>
       </Wrapper>
     </StyledHead>
   )

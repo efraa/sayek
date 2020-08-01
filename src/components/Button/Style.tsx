@@ -15,10 +15,10 @@ export const StyledButton = styled.button<any>`
   align-items: center;
   cursor: pointer;
   letter-spacing: 0.04em;
-  transition: all 0.1s ease-in-out;
+  transition: all 0.2s ease-in-out;
   background-color: ${({ secondary, disabled, theme: { colors } }) =>
     disabled
-      ? colors.grayLight
+      ? colors.whiteDark
       : secondary
       ? colors.secondary
       : colors.primary};

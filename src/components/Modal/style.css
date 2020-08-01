@@ -27,7 +27,7 @@
   width: 100%;
   left: 0;
   right: 0;
-  max-width: 736px;
+  max-width: 100%;
   padding: 24px 16px;
   transform: translateY(100%);
 }
@@ -50,4 +50,10 @@
 
 .modal-overlay--close .react-responsive-modal-modal {
   animation: modalLeaveAnimation 0.5s forwards 0s;
+}
+
+@media (min-width: 769px) {
+  .react-responsive-modal-modal {
+    max-width: 738px;
+  }
 }

@@ -1,7 +1,6 @@
 import React, { memo, useContext } from 'react'
 import { useHistory } from 'react-router-dom'
-import { AuthContext } from '../../store/contexts/AuthContext'
-import { AuthActions } from '../../store/actions/AuthActions'
+import { AuthContext, AuthActions } from '../../Authentication'
 import { Messages } from '../../data/messageConstants'
 
 // Comps

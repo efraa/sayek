@@ -1,15 +1,6 @@
 import styled from 'styled-components'
-import { Col, Row } from 'reactstrap'
 
 export const LoginScreen = styled.div`
-  /* min-height: 100vh;
-  position: relative;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center; */
-
   margin-bottom: 70px;
 
   h1 {

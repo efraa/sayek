@@ -3,18 +3,16 @@ import { config } from '../../config'
 
 export const AuthenticationService = {
   refreshToken: async (): Promise<{
-    data: {
-      token: string
-    }
-  }> => API.post('/users/refresh-token'),
+    token: string
+  }> => (await API.post('/users/refresh-token')).data,
 
-  logout: async (): Promise<{
-    data: [
+  logout: async (): Promise<
+    [
       {
         msg: string
       }
     ]
-  }> => API.post('/users/logout'),
+  > => (await API.post('/users/logout')).data,
 
   authFacebook: () => config.auth.facebook,
   authGoogle: () => config.auth.google,

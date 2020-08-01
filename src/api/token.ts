@@ -7,5 +7,5 @@ export const token = {
   set: (token: string) => (requestToken = token),
   destroy: () => (requestToken = undefined),
   refresh: async () =>
-    (requestToken = (await AuthenticationService.refreshToken()).data.token),
+    (requestToken = (await AuthenticationService.refreshToken()).token),
 }

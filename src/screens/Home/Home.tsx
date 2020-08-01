@@ -11,7 +11,7 @@ import { Messages } from '../../data/messageConstants'
 
 export const Home = memo(() => (
   <Screen>
-    <Container>
+    <Container fluid>
       <Row>
         <Col xs={12}>
           <Header>

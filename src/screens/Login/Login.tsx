@@ -2,7 +2,7 @@ import React, { useContext } from 'react'
 import { AuthenticationService } from '../../api/services/AuthenticationService'
 import { Link, useHistory } from 'react-router-dom'
 import { Messages } from '../../data/messageConstants'
-import { AuthContext } from '../../store/contexts/AuthContext'
+import { AuthContext } from '../../Authentication'
 
 // Components
 import LoginAsset from '../../assets/login.svg'

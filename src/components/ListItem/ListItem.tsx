@@ -1,17 +1,20 @@
 import React, { memo } from 'react'
+import { truncate } from '../../helpers/truncate'
 import { Settings } from '../Common'
 import { Item, Circle, Text, CircleWrapper } from './Style'
 
 interface IListItem extends React.HTMLProps<HTMLDivElement> {
   to: string
+  onClick: () => void
+  text: string
 }
 
-export const ListItem: React.FC<IListItem> = memo(({ to }) => (
+export const ListItem: React.FC<IListItem> = memo(({ to, onClick, text }) => (
   <Item>
     <CircleWrapper to={to}>
       <Circle>C</Circle>
-      <Text>Cuando estábamos en secundaria</Text>
+      <Text>{truncate(text, 38)}</Text>
     </CircleWrapper>
-    <Settings />
+    <Settings onClick={onClick} />
   </Item>
 ))

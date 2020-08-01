@@ -1,6 +1,6 @@
 import React, { useContext, useEffect } from 'react'
 import { Route, Redirect, RouteProps } from 'react-router-dom'
-import { AuthContext } from '../store/contexts/AuthContext'
+import { AuthContext } from '../Authentication'
 
 interface IProps extends RouteProps {
   redirect?: string

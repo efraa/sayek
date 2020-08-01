@@ -26,6 +26,14 @@ export const Messages = {
       button: 'Crear',
     },
   },
+  posts: {
+    title: 'Lo último que compartiste',
+    create: {
+      title: '¿Quieres compartir algo?',
+      placeholder: '¿Qué tienes en mente?',
+      button: 'Publicar',
+    },
+  },
   home: {
     hello: 'Hola,',
     help: '¿Qué podemos hacer por ti?',
