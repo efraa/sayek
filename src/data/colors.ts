@@ -2,7 +2,7 @@ export const Colors = [
   {
     id: 1,
     bg: '#FF7676',
-    color: 'rgba(0,0,0,0.5)',
+    color: 'rgba(0,0,0,0.8)',
   },
   {
     id: 2,
@@ -27,17 +27,17 @@ export const Colors = [
   {
     id: 6,
     bg: '#9DF89D',
-    color: 'white',
+    color: 'rgba(0,0,0,0.8)',
   },
   {
     id: 7,
     bg: '#8FC7FF',
-    color: 'rgba(0,0,0,0.5)',
+    color: 'rgba(0,0,0,0.8)',
   },
   {
     id: 8,
     bg: '#FFC48A',
-    color: 'rgba(0,0,0,0.5)',
+    color: 'rgba(0,0,0,0.8)',
   },
   {
     id: 9,
@@ -67,17 +67,17 @@ export const Colors = [
   {
     id: 14,
     bg: '#FFE4F2',
-    color: 'rgba(0,0,0,0.5)',
+    color: 'rgba(0,0,0,0.8)',
   },
   {
     id: 15,
     bg: '#FFE8D2',
-    color: 'rgba(0,0,0,0.5)',
+    color: 'rgba(0,0,0,0.8)',
   },
   {
     id: 16,
     bg: '#D9FFDD',
-    color: 'rgba(0,0,0,0.5)',
+    color: 'rgba(0,0,0,0.8)',
   },
   {
     id: 17,
@@ -102,12 +102,12 @@ export const Colors = [
   {
     id: 21,
     bg: '#F5C7C7',
-    color: 'rgba(0,0,0,0.5)',
+    color: 'rgba(0,0,0,0.8)',
   },
   {
     id: 22,
     bg: '#F7C540',
-    color: 'rgba(0,0,0,0.5)',
+    color: 'rgba(0,0,0,0.8)',
   },
   {
     id: 23,
@@ -115,3 +115,6 @@ export const Colors = [
     color: 'white',
   },
 ]
+
+export const randomColor = () =>
+  Colors[Math.floor(Math.random() * Colors.length)]
