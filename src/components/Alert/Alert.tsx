@@ -6,7 +6,7 @@ import './style.css'
 export const AlertContainer = memo(() => (
   <ToastContainer
     position="top-center"
-    autoClose={5000}
+    autoClose={6000}
     limit={1}
     closeButton={false}
     transition={Slide}

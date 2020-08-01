@@ -10,25 +10,29 @@
 .Toastify__toast {
   width: 100%;
   top: 0;
+  margin: 0;
 }
 
 .Toastify__progress-bar {
-  background: #00D084;
-  height: 4px;
+  background: rgba(0,0,0,0.150);
+  height: 3px;
 }
 
 .Toastify__toast {
-  color: #363636;
+  background: #26C49E;
+  color: white;
   font-size: 14px;
-  padding: 8px;
+  padding: 12px 8px;
   text-align: center;
+  min-height: 45px;
+  line-height: 16px;
 }
 
 .Toastify__toast--error {
   color: white;
-  background: #FF5678;
+  background: #E2013B;
 }
 
 .Toastify__toast--error .Toastify__progress-bar {
-  background: rgba(0,0,0,0.1);
+  background: rgba(0,0,0,0.2);
 }
