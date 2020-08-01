@@ -1,18 +1,16 @@
 import { Dispatch } from 'react'
 import JwtDecode from 'jwt-decode'
-import { token } from '../../api/token'
-import { AuthTypes } from '../types/AuthTypes'
-import { UserDTO } from '../../api/dtos/UserDTO'
-import { Alert } from '../../components/Alert'
+import { token } from '../api/token'
+import { AuthTypes } from './Types'
+import { UserDTO } from '../api/dtos/UserDTO'
+import { Alert } from '../components/Alert'
 
 // Services
-import { AuthenticationService } from '../../api/services/AuthenticationService'
+import { AuthenticationService } from '../api/services/AuthenticationService'
 
 const login = async (dispatch: Dispatch<AuthTypes>) => {
   try {
-    const {
-      data: { token: requestToken },
-    } = await AuthenticationService.refreshToken()
+    const { token: requestToken } = await AuthenticationService.refreshToken()
 
     if (requestToken) {
       const { user }: { user: UserDTO } = await JwtDecode(requestToken)
@@ -38,10 +36,10 @@ const login = async (dispatch: Dispatch<AuthTypes>) => {
 
 const logout = async (dispatch: Dispatch<AuthTypes>) => {
   try {
-    const { data } = await AuthenticationService.logout()
-    if (data[0].msg) {
+    const [{ msg }] = await AuthenticationService.logout()
+    if (msg) {
       token.destroy()
-      Alert.info(data[0].msg)
+      Alert.info(msg)
       return dispatch({ type: 'LOGOUT' })
     }
   } catch (error) {

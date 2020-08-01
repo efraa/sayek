@@ -1,4 +1,4 @@
-import { UserDTO } from '../../api/dtos/UserDTO'
+import { UserDTO } from '../api/dtos/UserDTO'
 
 interface SET_USER {
   type: 'SET_USER'

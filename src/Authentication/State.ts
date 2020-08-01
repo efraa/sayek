@@ -1,4 +1,4 @@
-import { UserDTO } from '../../api/dtos/UserDTO'
+import { UserDTO } from '../api/dtos/UserDTO'
 
 export interface IAuthState {
   user: UserDTO | undefined

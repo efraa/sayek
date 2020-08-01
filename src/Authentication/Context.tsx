@@ -1,7 +1,7 @@
 import React, { createContext, Dispatch, ReactNode, useReducer } from 'react'
-import { AuthTypes } from '../types/AuthTypes'
-import { AuthReducer } from '../reducers/AuthReducer'
-import { AuthState, IAuthState } from '../state/AuthState'
+import { AuthTypes } from './Types'
+import { AuthReducer } from './Reducer'
+import { AuthState, IAuthState } from './State'
 
 export interface IAuthContext {
   state: IAuthState
