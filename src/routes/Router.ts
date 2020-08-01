@@ -2,12 +2,14 @@ import { lazy } from 'react'
 import { Paths } from './Paths'
 
 // Screens
+const Landing = lazy(() => import('../screens/Landing'))
 const Login = lazy(() => import('../screens/Login'))
 const Logout = lazy(() => import('../screens/Logout'))
 const Home = lazy(() => import('../screens/Home'))
 const Walls = lazy(() => import('../screens/Walls'))
-const Landing = lazy(() => import('../screens/Landing'))
+const Posts = lazy(() => import('../screens/Posts'))
 const ComposeWall = lazy(() => import('../screens/Walls/ComposeWall'))
+const ComposePost = lazy(() => import('../screens/Posts/ComposePost'))
 
 const users = [
   {
@@ -50,9 +52,27 @@ const walls = [
   },
 ]
 
+const posts = [
+  {
+    path: Paths.posts.list,
+    component: Posts,
+    exact: true,
+    isProtected: true,
+    isSemiProtected: false,
+  },
+  {
+    path: Paths.posts.compose,
+    component: ComposePost,
+    exact: true,
+    isProtected: true,
+    isSemiProtected: false,
+  },
+]
+
 export const Router = [
   ...users,
   ...walls,
+  ...posts,
   {
     path: Paths.main,
     component: Landing,
