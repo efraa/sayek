@@ -8,23 +8,23 @@ import { Paths } from '../../routes/Paths'
 
 import { OptionsModal } from './OptionsModal'
 
-export const Walls = memo(() => {
+export const Posts = memo(() => {
   const [open, setOpen] = useState(false)
-  const [wall, setWall] = useState({ id: 0, name: '' })
+  const [wall, setPost] = useState({ id: 0, name: '' })
 
   const onClick = (wall: { id: number; name: string }) => {
-    setWall(wall)
+    setPost(wall)
     setOpen(true)
   }
 
   return (
-    <Layout title={Messages.walls.title}>
+    <Layout title={'Mensaje'}>
       <ListItem
-        to={Paths.walls.toWall(1)}
+        to={Paths.posts.toPost(1)}
         onClick={() =>
           onClick({ id: 1, name: 'Cuando estábamos en secundaria' })
         }
-        text="Cuando estábamos en secundaria You need to enable JavaScript to run this app."
+        text="Cuando estábamos en secundaria"
       />
 
       <OptionsModal
