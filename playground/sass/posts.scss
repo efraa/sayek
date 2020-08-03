@@ -1,0 +1,128 @@
+$block: 'post';
+
+.#{$block} {
+    &-link {
+        padding:14px 0;
+
+        &__prev {
+            width: 40px;
+            height: 40px;
+            padding: 5px 14px;
+            border: 1px solid #E5E5E5;
+            border-radius: 50%;
+            margin-right: 10px;
+            display: inline-block;
+
+            &__title {
+                color: #363636;
+                font-size: 16px;
+                font-weight:bold;
+                font-family:'Poppins', Arial, Helvetica, sans-serif;
+                
+                &:hover {
+                    color: #363636;
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+
+    &-info{
+        margin-top:22px;
+
+        &__details {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 16px;
+        }
+
+        &__user{
+            display: flex;
+            align-items: center;
+
+            &__name{
+                font-size: 16px;
+                font-weight: bold;
+                font-family: 'Poppins';
+                margin-right: 15px;
+                margin-bottom: 0;
+            }
+
+            &__hour {
+                color: #8899A6;
+                font-size: 12px;
+                font-family: 'Poppins';
+
+
+                &::before {
+                    content:'';
+                }
+            }
+        }
+
+        &__publication {
+            &__bg {
+                background-color:#56B6FF;
+                min-height: 300px;
+                border-radius: 16px;
+                display: flex;
+                align-items: center;
+                margin-bottom: 12px;
+
+                &__text {
+                    color: #fff;
+                    text-align: center;
+                    max-width: 278px;
+                    font-size: 20px;
+                    line-height: 26px;
+                    margin:0 auto;
+                    width: 100%;
+                    font-family: 'Poppins', Arial, Helvetica, sans-serif;
+                }
+
+            }
+
+            &__action {
+                margin-bottom:14px;
+            }
+
+
+            &__item {
+                width: 40px;
+                height: 40px;
+                padding:5px;
+                background-color:#F5F8FA;
+                border-radius: 50%;
+                text-align: center;
+
+                &--like {
+                    background-color: #FFF6F8;
+                    margin-right: 14px;
+                }
+            }
+        }
+        &__tasks {
+            margin-top: 14px;
+            p {
+                color: #8899A6;
+                margin-right: 20px;
+                font-weight: 500;
+            }
+        }
+        &__numbers {
+            color: #363636;
+        }
+
+        &__comments {
+            margin-top: 45px;
+
+            &__disclaimer {
+                p {
+                    color: #8899A6;
+                    font-size: 16px;
+                    font-weight: 500;
+                }
+            }
+        }
+    }
+}
