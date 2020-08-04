@@ -1,3 +1,11 @@
 export interface ListOfWallDTO {
-  id: number
+  walls: [
+    {
+      id: number
+      name: string
+    }
+  ]
+  all: number
+  pages: number
+  nextPage: number
 }
