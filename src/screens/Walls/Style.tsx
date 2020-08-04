@@ -102,3 +102,38 @@ export const OptionsIcon = styled.div`
   align-items: center;
   margin-right: 16px;
 `
+
+export const WallsContainer = styled.div``
+
+export const LoadMore = styled.div`
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+`
+export const LoadMoreContent = styled.div`
+  border: solid 1px ${({ theme: { colors } }) => colors.gray};
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 16px;
+  padding: 16px;
+  min-height: 98px;
+
+  div:first-child {
+    height: 50px;
+    width: 50px;
+    min-height: 50px;
+    min-width: 50px;
+    border-radius: 100%;
+    margin-right: 16px;
+  }
+
+  div:last-child {
+    min-height: 18px;
+    max-width: 50%;
+    width: 100%;
+    border-radius: 12px;
+  }
+`

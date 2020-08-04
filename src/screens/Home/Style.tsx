@@ -2,6 +2,11 @@ import styled from 'styled-components'
 import { Link } from 'react-router-dom'
 
 export const Screen = styled.div`
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  align-items: center;
+  justify-content: center;
   padding: 24px 0;
 `
 

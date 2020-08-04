@@ -23,6 +23,11 @@ export const ComposeInput = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+  user-select: text;
+  white-space: pre-wrap;
+  overflow-wrap: break-word;
+  width: 100%;
+  flex-direction: column;
 
   &:hover,
   &:focus {
@@ -37,7 +42,8 @@ export const ComposeInput = styled.div`
         .string()};
   }
 
-  a {
+  a,
+  span {
     padding: 6px;
     line-height: 40px;
     background: ${({ color }) =>
@@ -61,6 +67,8 @@ export const ComposeInputWrapper = styled.div`
   vertical-align: middle;
   text-align: center;
   border-radius: 16px;
+  min-height: 350px;
+  transition: all 0.3s ease-in-out;
 `
 
 export const ComposeWrapper = styled.div`

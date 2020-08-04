@@ -19,7 +19,7 @@
 }
 
 .Toastify__toast {
-  background: #26C49E;
+  background: rgba(54,54,54, 0.98);
   color: white;
   font-size: 14px;
   padding: 12px 8px;

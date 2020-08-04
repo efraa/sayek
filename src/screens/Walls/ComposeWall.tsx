@@ -9,9 +9,12 @@ import { Button } from '../../components/Button'
 
 import { WallService } from '../../api/services/WallService'
 import { Alert } from '../../components/Alert'
+import { useHistory } from 'react-router-dom'
+import { Paths } from '../../routes/Paths'
 
 const ComposeWall = memo(() => {
   const [name, setName] = useState('')
+  const history = useHistory()
   const [addWall] = useMutation(WallService.create, {
     onSuccess: () => queryCache.invalidateQueries('walls'),
     onError: (error: any) =>
@@ -22,8 +25,8 @@ const ComposeWall = memo(() => {
     e.preventDefault()
     const wall = await addWall(name)
     if (wall) {
-      setName('')
-      Alert.info(`"${wall?.name}" fue creado correctamente.`)
+      Alert.info(`${wall?.name} fue creado correctamente.`)
+      history.push(Paths.walls.list)
     }
   }
 

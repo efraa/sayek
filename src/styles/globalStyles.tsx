@@ -1,4 +1,13 @@
-import { createGlobalStyle } from 'styled-components'
+import { createGlobalStyle, keyframes } from 'styled-components'
+
+const placeload = keyframes`
+  0% {
+    background-position: -468px 0;
+  }
+  100% {
+    background-position: 468px 0;
+  }
+`
 
 export const GlobalStyle = createGlobalStyle`
   html,
@@ -123,5 +132,13 @@ export const GlobalStyle = createGlobalStyle`
   textarea {
     line-height: 32px;
     font-weight: 500;
+  }
+
+  .load {
+    animation: ${placeload} 1s linear forwards 0s infinite;
+    background: ${({ theme: { colors } }) =>
+      `linear-gradient(to right, ${colors.secondary} 8%, ${colors.gray} 18%, ${colors.secondary} 33%)`};
+    background-size: 1200px 104px;
+    position: relative;
   }
 `

@@ -32,15 +32,19 @@ const ComposePost = () => {
     console.log(data)
   }
 
+  const formatData = (data: string) => {
+    const sanitizeHTML = sanitizeHtml(data, {
+      allowedTags: ['b', 'i', 'br', 'div'],
+      allowedAttributes: false,
+    })
+
+    return sanitizeHTML
+  }
+
   const onInput = e => {
     setData({
       ...data,
-      content: sanitizeHtml(e.target.value, {
-        allowedTags: ['a', 'b', 'i', 'br'],
-        allowedAttributes: {
-          a: ['href'],
-        },
-      }),
+      content: formatData(e.target.value),
     })
   }
 

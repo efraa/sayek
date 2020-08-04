@@ -1,58 +1,53 @@
-.login-header {
-  background-color: #fff;
-}
-
-.login-header__container {
-  padding: 24px 0;
-  border: 1px solid #E5E5E5;
-  text-align: center;
-}
-
-.login-header__logo {
-  font-family: 'Poppins';
-  color: #FF5678;
-  font-size: 22px;
-  text-align: center;
-  margin-bottom: 0;
-  font-weight: 700;
-  text-decoration: none;
-}
-
-.login-header__logo:hover {
-  text-decoration: none;
-}
-
 .login__body {
-  padding-top: 85px;
-  padding-bottom: 185px;
+  margin-bottom: 70px;
 }
 
 .login__body h1 {
-  font-size: 40px;
+  font-size: 26px;
   font-family: "Poppins", Arial, Helvetica, sans-serif;
-  margin-bottom: 44px;
+  margin-bottom: 26px;
   font-weight: 700;
+  text-align: center;
 }
 
 .login__social {
-  margin-bottom: 24px;
+  margin-bottom: 34px;
 }
 
 .login__social__item {
   border: 1px solid #E5E5E5;
-  border-radius: 20px;
-  padding: 44px 38px;
-  max-width: 317px;
+  border-radius: 30px;
+  padding: 20px 0;
   width: 100%;
   text-align: center;
+  margin-bottom: 16px;
+  color: black;
+  display: inline-block;
+  background-repeat: no-repeat;
+  background-size: 18px;
+  background-position: 20px;
 }
 
-.login__social__item__info {
-  color: black;
+.login__social__item--return {
+  background-color: #F5F8FA;
+  border: 0;
+}
+
+.login__social__item--google {
+  background-image: url(../assets/logo-google.svg);
+}
+
+.login__social__item--facebook {
+  background-image: url(../assets/logo-faceboook.svg);
+}
+
+.login__social__item:last-child {
+  margin-bottom: 0;
 }
 
 .login__social__item img {
-  margin-bottom: 15px;
+  width: 18px;
+  height: 18px;
 }
 
 .login__social__item span {
@@ -60,16 +55,14 @@
   display: inline-block;
 }
 
-.login__social__item:first-child {
-  margin-right: 16px;
-}
-
 .login-image {
-  text-align: right;
+  text-align: center;
+  margin-top: 60px;
+  margin-bottom: 34px;
 }
 
 .login-image img {
-  max-width: 440px;
+  max-width: 276px;
   width: 100%;
 }
 
@@ -79,6 +72,7 @@
   max-width: 368px;
   color: #8899A6;
   font-family: "Poppins", Arial, Helvetica, sans-serif;
+  text-align: center;
 }
 
 .login__disclaimer a {

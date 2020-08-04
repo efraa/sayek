@@ -1,8 +1,10 @@
 import React from 'react'
+import { WallDTO } from '../../api/dtos/WallDTO'
 
 // Comps
 import { Modal } from '../../components/Modal'
 import { Messages } from '../../data/messageConstants'
+import { Paths } from '../../routes/Paths'
 import {
   OptionsHead,
   OptionsCircle,
@@ -16,10 +18,7 @@ import {
 interface IModal extends React.HTMLProps<HTMLDivElement> {
   isOpen: boolean
   onCloseModal: () => void
-  wall: {
-    id: number
-    name: string
-  }
+  wall: WallDTO
 }
 
 export const OptionsModal: React.FC<IModal> = ({
@@ -34,7 +33,7 @@ export const OptionsModal: React.FC<IModal> = ({
     </OptionsHead>
     <Options>
       <OptionsItem>
-        <OptionsGoTo to="/">
+        <OptionsGoTo to={Paths.walls.toWall(wall.id)}>
           <OptionsIcon>
             <svg
               xmlns="http://www.w3.org/2000/svg"
