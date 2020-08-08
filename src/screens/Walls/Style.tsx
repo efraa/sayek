@@ -137,3 +137,14 @@ export const LoadMoreContent = styled.div`
     border-radius: 12px;
   }
 `
+
+export const NotFound = styled.div`
+  border: solid 1px ${({ theme: { colors } }) => colors.gray};
+  padding: 24px;
+  border-radius: 12px;
+  min-height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+`
