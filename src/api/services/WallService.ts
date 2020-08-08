@@ -11,4 +11,18 @@ export const WallService = {
 
   get: async (id: number): Promise<WallDTO> =>
     (await API.get(`/walls/${id}`)).data,
+
+  join: async (
+    id: number
+  ): Promise<{
+    wallId: number
+    memberId: number
+  }> => (await API.post(`/walls/${id}/join`)).data,
+
+  leave: async (
+    id: number
+  ): Promise<{
+    wallId: number
+    memberId: number
+  }> => (await API.delete(`/walls/${id}/join`)).data,
 }
