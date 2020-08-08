@@ -4,6 +4,7 @@ import { WallDTO } from '../../api/dtos/WallDTO'
 // Comps
 import { Modal } from '../../components/Modal'
 import { Messages } from '../../data/messageConstants'
+import { firstLetter } from '../../helpers/firstLetter'
 import { Paths } from '../../routes/Paths'
 import {
   OptionsHead,
@@ -18,6 +19,7 @@ import {
 interface IModal extends React.HTMLProps<HTMLDivElement> {
   isOpen: boolean
   onCloseModal: () => void
+  onLeave: () => void
   wall: WallDTO
 }
 
@@ -25,10 +27,11 @@ export const OptionsModal: React.FC<IModal> = ({
   isOpen,
   onCloseModal,
   wall,
+  onLeave,
 }) => (
   <Modal isOpen={isOpen} onCloseModal={onCloseModal}>
     <OptionsHead>
-      <OptionsCircle>C</OptionsCircle>
+      <OptionsCircle>{firstLetter(wall.name)}</OptionsCircle>
       <OptionsText>{wall.name}</OptionsText>
     </OptionsHead>
     <Options>
@@ -78,7 +81,7 @@ export const OptionsModal: React.FC<IModal> = ({
           Copiar enlance
         </OptionsGoTo>
       </OptionsItem>
-      <OptionsItem>
+      <OptionsItem onClick={() => onLeave()}>
         <OptionsGoTo as="button">
           <OptionsIcon>
             <svg

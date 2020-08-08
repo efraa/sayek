@@ -25,7 +25,7 @@ const ComposeWall = memo(() => {
     e.preventDefault()
     const wall = await addWall(name)
     if (wall) {
-      Alert.info(`${wall?.name} fue creado correctamente.`)
+      Alert.info(Messages.walls.created.replace('{VALUE}', wall?.name))
       history.push(Paths.walls.list)
     }
   }

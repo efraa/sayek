@@ -6,7 +6,7 @@ export const Paths = {
   walls: {
     list: '/w/list',
     compose: '/w/compose',
-    get: '/w/:postId',
+    get: '/w/:wallId',
     toWall: (wallId: number) => `/w/${wallId}`,
   },
   explore: '/explore',
