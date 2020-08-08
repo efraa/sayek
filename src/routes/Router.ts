@@ -7,6 +7,7 @@ const Login = lazy(() => import('../screens/Login'))
 const Logout = lazy(() => import('../screens/Logout'))
 const Home = lazy(() => import('../screens/Home'))
 const Walls = lazy(() => import('../screens/Walls'))
+const Wall = lazy(() => import('../screens/Walls/Wall'))
 const Posts = lazy(() => import('../screens/Posts'))
 const ComposeWall = lazy(() => import('../screens/Walls/ComposeWall'))
 const ComposePost = lazy(() => import('../screens/Posts/ComposePost'))
@@ -49,6 +50,13 @@ const walls = [
     exact: true,
     isProtected: true,
     isSemiProtected: false,
+  },
+  {
+    path: Paths.walls.get,
+    component: Wall,
+    exact: true,
+    isProtected: false,
+    isSemiProtected: true,
   },
 ]
 
