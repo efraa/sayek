@@ -25,6 +25,9 @@ export const Messages = {
       placeholder: 'Nombre del muro (obligatorio)',
       button: 'Crear',
     },
+    created: '{VALUE} fue creado correctamente',
+    leave: '¿Seguro que quieres abandonar {VALUE}?',
+    leaveed: 'Abandonaste {VALUE}',
   },
   posts: {
     title: 'Lo último que compartiste',
