@@ -107,6 +107,7 @@ $block: 'post';
                 color: #8899A6;
                 margin-right: 20px;
                 font-weight: 500;
+                margin-bottom: 0;
             }
         }
         &__numbers {
@@ -122,6 +123,56 @@ $block: 'post';
                     font-size: 16px;
                     font-weight: 500;
                 }
+            }
+
+            h5 {
+                font-size:16px;
+                line-height: 26px;
+                margin-bottom: 18px;
+                font-weight: bold;
+            }
+
+            a {
+                color:#8899A6;
+                &:hover {
+                    text-decoration: none;
+                }
+            }
+
+            &__item{
+                margin-bottom: 12px;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+
+                .#{$block}-info__user{
+                    margin-bottom: 6px;
+                    &__name {
+                        font-size:14px;
+                        font-weight: normal;
+                    }
+                }
+
+                &__text {
+                    background-color: #F5F8FA;
+                    border-radius:16px;
+                    padding: 10px 12px;
+                    max-width: 300px;
+                    
+                    p {
+                        font-size: 14px;
+                        font-weight: 18px;
+                        font-family: 'poppins', Arial, Helvetica, sans-serif;
+                        color: #8899A6;
+                    }
+                }
+            }
+
+            &__counter {
+                margin:15px 0;
+                font-family: 'Poppins', Arial, Helvetica, sans-serif;
+                font-weight: 500;
+                font-size: 14px;
             }
         }
     }
