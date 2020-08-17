@@ -1,0 +1,36 @@
+$block: 'comments';
+
+.#{$block} {
+    &__box {
+        margin-top:20px;
+        padding:0 16px;
+        position: relative;
+        border: 2px solid #E5E5E5;
+        border-left: 0;
+        border-right: 0;
+    }
+
+    &__input{
+        width: 100%;
+        height: 80px;
+        border: 0;
+        position: relative;
+        ::-webkit-input-placeholder {
+            font-family: 'Poppins', Arial, Helvetica, sans-serif;
+            color: #8899A6;
+            font-size: 14px;
+            font-weight: bold;
+          }
+
+        &:focus{
+            outline: 0;
+        }
+    }
+
+    &__submit{
+        background-color: #FF5678;
+        position: absolute;
+        top: 10px;
+        right: 15px;
+    }
+}
